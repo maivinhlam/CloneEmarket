@@ -2,231 +2,60 @@
 <html lang="en">
 
 <head>
-  <title>Clone Hệ thống điện máy abc...xyz</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone emarket</title>
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=vietnamese" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
 </head>
 
 <body>
-  <div class="Header">
-    <div class="top-header">
-      <a>
-        <img src="./image/logo_logo3.png" alt="">
-      </a>
-      <div class="search">
-        <input type="text" name="search" id="search" placeholder="Nhập từ khóa tìm kiếm">
-        <button class="buttonSearch fas fa-search">
-        </button>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Fixed navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
-      <div class="top-header-right">
-        <div style="padding-right: 25px;">
-          <i class="fas fa-shopping-cart" style="color: #fff; font-size: 25px;"></i>
-        </div>
-        <div class="title">
-          Sản phẩm đã xem
-        </div>
-        <div>
-          <i>0358 443 254</i>
-        </div>
-      </div>
-    </div>
-    <div class="center-header">
-      <div class="menu">
-        <div class="mainMenu container">
-          <i class="fas fa-bars"></i>
-          <a href="#">Danh mục sản phẩm</a>
-        </div>
-      </div>
+    </nav>
+  </header>
 
-      <div class="slide">
+  <main role="main" class="container">
 
-        <div class="menu">
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
-          <div class="card-body">Content</div>
+  </main>
 
-        </div>
-
-        <!-- Container for the image gallery -->
-        <div class="imageGallery">
-          <div class="slides" id="slides">
-            <!-- Full-width images with number text -->
-            <div class="mySlides" id="lastClone">
-              <img src="./image/slide4.jpg">
-            </div>
-            <div class="mySlides">             
-              <img src="./image/slide1.jpg">
-            </div>
-
-            <div class="mySlides">
-              <img src="./image/slide2.jpg">
-            </div>
-
-            <div class="mySlides">
-              <img src="./image/slide3.jpg">
-            </div>
-
-            <div class="mySlides">
-              <img src="./image/slide4.jpg">
-            </div>
-            <div class="mySlides" id="firstClone">             
-              <img src="./image/slide1.jpg">
-            </div>
-
-            <!-- Next and previous buttons -->
-            
-
-            <!-- Image text -->
-            <div class="caption-container">
-              <p id="caption"></p>
-            </div>
-          </div>
-          <div>
-            <button class="prev" id="prev">&#10094;</button>
-            <button class="next" id="next">&#10095;</button>
-          </div>
-          <!-- Thumbnail images -->
-          <div class="row">
-            <div class="column">
-              <img class="demo cursor active" src="./image/slide1.jpg" style="width:100%" onclick="currentSlide(1)"
-                alt="The Woods">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="./image/slide2.jpg" style="width:100%" onclick="currentSlide(2)"
-                alt="Cinque Terre">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="./image/slide3.jpg" style="width:100%" onclick="currentSlide(3)"
-                alt="Mountains and fjords">
-            </div>
-            <div class="column">
-              <img class="demo cursor" src="./image/slide4.jpg" style="width:100%" onclick="currentSlide(4)"
-                alt="Northern Lights">
-            </div>
-
-          </div>
-        </div>
-
-        <div class="right">
-
-          <img src="./image/top.jpg" class="rounded" alt="Cinque Terre">
-          <img src="./image/bottom.jpg" class="rounded" alt="Cinque Terre">
-
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="bottom-header">
-
-  </div>
-
-
-  <div class="Center">
-    <div class="listProduct">
-      <div class="title">
-        <p>SẢN PHẨM GIẢM GIÁ</p>
-        <a href="#">Xem thêm SẢN PHẨM GIẢM
-          GIÁ </a>
-      </div>
-      <div class="row" id="listProduct">
-        <div class="product column" id="lastClone">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà abc</a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg" alt="">
-          <a href="#">Điều hoà </a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà LG 1 chiều </a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà LG 1 chiều 12000btu </a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà LG 1 chiều 12000btu </a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà LG 1 chiều 12000btu inverter</a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        <div class="product column">
-          <img src="./image/250_810_v_enf.jpg"
-            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <a href="#">Điều hoà abc</a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-        
-        <div class="product column" id="firstClone">
-          <img src="./image/250_810_v_enf.jpg" alt="">
-          <a href="#">Điều hoà sx</a>
-          <p id="price-sale">9.390.000đ</p>
-          <p id="price">9.850.000đ (-15%)</p>
-          <p>Miễn phí lắp đặt</p>
-          <p>Miễn phí vận chuyển</p>
-        </div>
-      </div>
-      <!-- Next and previous buttons -->
-      <button class="prev" id="prevProduct">&#10094;</button>
-      <button class="next" id="nextProduct">&#10095;</button>
-    </div>
-
-  </div>
-
-  <div class="Footer">
-    <div class="information">
+  <footer>
+    <div class="container">
       <div class="row">
-        <div class="column">
-          <h3 class="title"><b>Công ty CP TMĐT E-MARKET Việt Nam</b></h3>
-          <div class="content">
+        <div class="col-md-4 col-sm-6 pt-3">
+          <h5 class="text-danger text-uppercase font-weight-bold">Công ty CP TMĐT E-MARKET Việt Nam</h5>
+          <div class="content small">
             <b>Trụ Sở:</b> 1022 Quang Trung - Hà Đông - Hà Nội | <a href="https://goo.gl/maps" target="_blank"
               class="blue">Xem bản đồ đường đi</a><br>
             <b>Số ĐKKD</b>: 0109159768 do Sở KHĐT Tp. Hà Nội cấp<br>
@@ -236,9 +65,9 @@
           </div>
         </div>
         <!--col-info-->
-        <div class="column">
-          <h3 class="title">Thông tin</h3>
-          <div class="content list-link">
+        <div class="col-md-2 col-sm-6 pt-3">
+          <h6 class="text-danger text-uppercase font-weight-bold">Thông tin</h6>
+          <div class="container list-group small">
             <a href="/gioi-thieu">Giới thiệu công ty</a>
             <a href="https://emarket.com.vn/tin-tuc">Tin khuyến mại</a>
             <a href="/tu-van-tieu-dung.html">Tư vấn tiêu dùng</a>
@@ -249,9 +78,9 @@
           </div>
         </div>
         <!--col-info-->
-        <div class="column">
-          <h3 class="title">Hỗ trợ khách hàng</h3>
-          <div class="content list-link">
+        <div class="col-md-3  col-sm-6 pt-3">        
+          <h6 class="text-danger text-uppercase font-weight-bold">Hỗ trợ khách hàng</h6>
+          <div class="list-group small">
             <a href="/lien-he">Liên hệ</a>
             <a href="/huong-dan-dat-hang.html">Hướng dẫn đặt hàng</a>
             <a href="/hinh-thuc-thanh-toan.html">Hình thức thanh toán</a>
@@ -262,8 +91,8 @@
           </div>
         </div>
         <!--col-info-->
-        <div class="column">
-          <h3 class="title">Kết nối với chúng tôi</h3>
+        <div class="col-md-3 col-sm-6 pt-3">
+          <h6 class="text-danger text-uppercase font-weight-bold">Kết nối với chúng tôi</h6>
           <div class="icon">
             <a class="btn" href="#">
               <i class="fab fa-facebook"></i>
@@ -281,7 +110,7 @@
               <i class="fab fa-youtube"></i>
             </a>
           </div>
-          <h3 class="title">Cách thức thanh toán</h3>
+          <h6 class="text-danger text-uppercase font-weight-bold pt-3">Cách thức thanh toán</h6>
           <div class="content">
             <a href="/hinh-thuc-thanh-toan.html"><i class="icon-footer icon-pay"></i> </a>
           </div>
@@ -291,10 +120,17 @@
       </div>
       <!--container-->
     </div>
+  </footer>
 
-    
-  </div>
 
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="myJavaScript.js"></script>
 </body>
 
