@@ -14,3 +14,173 @@ body {
 a, a:hover{
 	text-decoration: none;	
 }
+
+a {
+	text-decoration: none;
+}
+
+.title {
+	color: red;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+.listProduct .title {
+	position: relative;
+}
+
+.listProduct .title>* {
+	display: inline-block;
+}
+
+.listProduct .title::first-child {
+	float: left;
+}
+
+.listProduct .title::first-child::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.listProduct .title a {
+	position: absolute;
+	right: 5px;
+	top: 30%;
+}
+
+.listProduct .title:first-child::before {
+	content: '';
+	border: solid 20px transparent;
+	border-left-color: red;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+	/* Adjusts for spacing */
+}
+
+.listProduct .product {
+	padding: 10px 20px;
+	border: 0.1px #dddddd93 solid;
+}
+
+.listProduct .product:hover {
+	border: 0.1px #c9c7c7 solid;
+}
+
+.listProduct {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.listProduct .product img {
+	width: 100%;
+}
+
+.listProduct .product >* {
+	display: block;
+}
+
+.listProduct .product {
+	/* display: none; */
+	display: inline-block;
+	width: 240px;
+	padding: 20px;
+}
+
+.listProduct .product a {
+	text-decoration: none;
+	color: #161313;
+	
+}
+
+.listProduct .product p {
+	color: red;
+}
+
+.listProduct .product.active {
+	display: inline-block;
+}
+
+.listProduct .product #price-sale {
+	font-weight: bold;
+}
+
+.listProduct .product #price {
+	text-decoration: line-through;
+	color: #a8a6a6;
+}
+
+.listProduct {
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.listProduct .column {
+	
+	float: left;
+}
+
+.listProduct .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.listProduct .row {	
+	width: 3000px;
+}
+
+
+/* Next & previous buttons */
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 7px 5px;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+	background-color: #f1f1f1;
+	left: 0px;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+	left: auto;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover, .next:hover {
+	background-color: rgba(141, 127, 127, 0.8);
+}
+
+
+/* Main menu */
+.main-menu{
+
+}
+
+.main-menu .title{
+	position: relative;
+}
+
+.main-menu .list{
+	position: absolute;
+	z-index: 1000;
+}
+
+img{
+	width: 100%;
+}
