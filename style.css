@@ -124,6 +124,10 @@ a {
 	float: left;
 }
 
+.listProduct .column a{	
+	height: 55px;
+}
+
 .listProduct .row:after {
 	content: "";
 	display: table;
@@ -178,9 +182,40 @@ a {
 
 .main-menu .list{
 	position: absolute;
-	z-index: 1000;
+	z-index: 999;
 }
 
 img{
 	width: 100%;
+}
+
+
+/* ////////////////////////// */
+.carousel-indicators{
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+.carousel-indicators li{
+	width: 20%;
+	text-indent: unset !important;
+	height: unset;
+	z-index: 999;
+	/* opacity: 1; */
+}
+
+.carousel-indicators li:hover{
+	transform: scale(1.8);
+	opacity: 1;
+	z-index: 1000;
+}
+
+.carousel-indicators .active{
+	transform: scale(1.4);
+}
+@media screen and (max-width: 975px) {
+	.carousel-indicators li img{
+		display: none;
+	}
 }
