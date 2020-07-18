@@ -70,15 +70,6 @@ a {
 	border: 0.1px #c9c7c7 solid;
 }
 
-.listProduct {
-	padding-left: 0px;
-	padding-right: 0px;
-}
-
-.listProduct .product img {
-	width: 100%;
-}
-
 .listProduct .product >* {
 	display: block;
 }
@@ -86,8 +77,8 @@ a {
 .listProduct .product {
 	/* display: none; */
 	display: inline-block;
-	width: 240px;
-	padding: 20px;
+	/* width: 240px; */
+	/* padding: 20px; */
 }
 
 .listProduct .product a {
@@ -117,25 +108,6 @@ a {
 	background-color: #fff;
 	position: relative;
 	overflow: hidden;
-}
-
-.listProduct .column {
-	
-	float: left;
-}
-
-.listProduct .column a{	
-	height: 55px;
-}
-
-.listProduct .row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.listProduct .row {	
-	width: 3000px;
 }
 
 
@@ -172,8 +144,9 @@ a {
 
 
 /* Main menu */
-.main-menu{
-
+.main-menu div:first-child{
+	z-index: 999;
+	box-shadow: 0 1rem 3rem rgba(151, 104, 104, 0.18) !important;
 }
 
 .main-menu .title{
@@ -182,7 +155,7 @@ a {
 
 .main-menu .list{
 	position: absolute;
-	z-index: 999;
+	z-index: 10;
 }
 
 img{
@@ -192,8 +165,8 @@ img{
 
 /* ////////////////////////// */
 .carousel-indicators{
-	margin-left: 0;
-	margin-right: 0;
+	margin-left: 3%;
+	margin-right: 3%;
 
 }
 
@@ -201,7 +174,7 @@ img{
 	width: 20%;
 	text-indent: unset !important;
 	height: unset;
-	z-index: 999;
+	z-index: 99;
 	/* opacity: 1; */
 }
 
@@ -213,9 +186,63 @@ img{
 
 .carousel-indicators .active{
 	transform: scale(1.4);
+	z-index: 999;
 }
 @media screen and (max-width: 975px) {
 	.carousel-indicators li img{
 		display: none;
 	}
 }
+
+
+/* navbar for mobile */
+
+#navbar-mobile nav{
+	padding: 0;
+}
+
+#navbar-mobile .navbar-brand{
+	margin-right: 0;
+}
+
+
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	background-color: rgb(223, 143, 143);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	/* text-align:center; */
+  }
+  
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  
+  }
+  
+  .sidenav a:hover{
+	color: #db4848;
+  }
+  
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
