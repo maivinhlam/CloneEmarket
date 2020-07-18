@@ -19,13 +19,40 @@
 </head>
 
 <body>
+  <div style="width: 100%;">
+    <div class="main-menu row sidenav" id="mySidenav">      
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="padding: 0;">&times;</a>  
+      <div class="col-lg-3 bg-light clearfix ">
+        
+        <div class="list bg-light list-group small" style="width: 100%; left:0;">
+          <div class="dropdown dropright">
+            <a href="#" class="list-group-item list-group-item-action dropdown-toggle" data-toggle="dropdown">First
+              item</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </div>
+          <a href="#" class="list-group-item list-group-item-action">Second item</a>
+          <a href="#" class="list-group-item list-group-item-action">Third item</a>
+          <a href="#" class="list-group-item list-group-item-action">First item</a>
+          <a href="#" class="list-group-item list-group-item-action">Second item</a>
+          <a href="#" class="list-group-item list-group-item-action">Third item</a>
+        </div>
+      </div>
+      <div class="col-lg-9 bg-light">
+
+      </div>
+    </div>
+  </div>
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./image/logo_logo3.png" alt="Logo">
         </a>
-        <div class="collapse flex-grow-0  navbar-collapse  w-50" id="navbarCollapse">
+        <div class="collapse flex-grow-0  navbar-collapse w-50 d-none d-lg-block" id="navbarCollapse">
           <form class="form-inline  mt-2 mt-md-0 w-100">
             <div class="input-group w-100">
               <input type="text" class="form-control" placeholder="Username">
@@ -36,51 +63,69 @@
           </form>
         </div>
         <div class="d-flex w-25 justify-content-end">
-          <a class="navbar-brand" href="#">          
+          <a class="navbar-brand" href="#">
             <i class="fa fa-phone"></i>
           </a>
-          <a class="navbar-brand" href="#">  
+          <a class="navbar-brand" href="#">
             <i class="fa fa-shopping-cart"></i>
           </a>
         </div>
       </div>
     </nav>
-
-    <!-- Container for the image gallery -->
-    <div  class="bg-light">
-    <div class="container d-none d-lg-block">
-      <div class="main-menu row">
-        <div class="col-lg-3 bg-light clearfix">
-          <div class="title py-2">
-            <h5>
-              <i class="fas fa-bars"></i>
-              <span class="">
-                <a href="#" class="font-weight-bold text-uppercase">Danh mục sản phẩm</a>
-              </spa>
-            </h5>
-          </div>
-          <div class="list bg-light list-group small" style="width: 100%; left:0;">
-            <div class="dropdown dropright">
-              <a href="#" class="list-group-item list-group-item-action " data-toggle="dropdown">First item</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Link 1</a>
-                <a class="dropdown-item" href="#">Link 2</a>
-                <a class="dropdown-item" href="#">Link 3</a>
+    <div class="container" id="navbar-mobile">
+      <nav class="navbar navbar-expand-md bg-none navbar-dark d-md-none">
+        <button class="navbar-toggler bg-danger" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"  onclick="openNav()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-brand" style="width: 80%;">
+          <form class="form-inline ">
+            <div class="input-group w-100">
+              <input type="text" class="form-control" placeholder="Username">
+              <div class="input-group-prepend">
+                <button class="btn btn-light fas fa-search input-group-text" aria-hidden="true"></button>
               </div>
             </div>
-            <a href="#" class="list-group-item list-group-item-action">Second item</a>
-            <a href="#" class="list-group-item list-group-item-action">Third item</a>
-            <a href="#" class="list-group-item list-group-item-action">First item</a>
-            <a href="#" class="list-group-item list-group-item-action">Second item</a>
-            <a href="#" class="list-group-item list-group-item-action">Third item</a>
-          </div>
+          </form>
         </div>
-        <div class="col-lg-9 bg-light">
-         
+      </nav>
+    </div>
+    <!-- Container for the image gallery -->
+    <div class="bg-light">
+      <div class="container d-none d-lg-block ">
+        <div class="main-menu row">
+          <div class="col-lg-3 bg-light pl-0 pr-0 shadow-lg">
+            <div class="title py-2 text-dark ">
+              <h5>
+                <i class="fas fa-bars ml-1"></i>
+                <span class="">
+                  <a href="#" class="font-weight-bold text-uppercase small text-dark text-wrap">Danh mục
+                    sản phẩm</a>
+                  </spa>
+              </h5>
+            </div>
+            <div class="list bg-light list-group small" style="width: 100%; left:0;">
+              <div class="dropdown dropright">
+                <a href="#" class="list-group-item list-group-item-action dropdown-toggle" data-toggle="dropdown">First
+                  item</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div>
+              <a href="#" class="list-group-item list-group-item-action">Second item</a>
+              <a href="#" class="list-group-item list-group-item-action">Third item</a>
+              <a href="#" class="list-group-item list-group-item-action">First item</a>
+              <a href="#" class="list-group-item list-group-item-action">Second item</a>
+              <a href="#" class="list-group-item list-group-item-action">Third item</a>
+            </div>
+          </div>
+          <div class="col-lg-9 bg-light">
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <div class="container mt-3">
       <div class="row">
         <div class="col-lg-3 col-sm-0 "></div>
@@ -144,84 +189,122 @@
 
   <main role="main" class="container mt-4">
     <div class="Center">
-      <div class="listProduct">
-        <div class="title">
+      <div class="listProduct" id="list-product">
+        <div class="title border border-danger border-top-0 border-left-0 border-right-0 ">
           <p>SẢN PHẨM GIẢM GIÁ</p>
-          <a href="#">Xem thêm SẢN PHẨM GIẢM
+          <a href="#" class="d-none d-md-block">Xem thêm SẢN PHẨM GIẢM
             GIÁ </a>
         </div>
-        <div class="row" id="listProduct">
-          <div class="product column" id="lastClone">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà abc</a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+        <div class="row" id="listProduct">          
+          <div class="card product column" id="lastClone">
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0 p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà abc</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg" alt="">
-            <a href="#">Điều hoà </a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà LG 1 chiều </a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 2</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà LG 1 chiều 12000btu </a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 3</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà LG 1 chiều 12000btu </a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 4</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà LG 1 chiều 12000btu inverter</a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 5</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-          <div class="product column">
-            <img src="./image/250_810_v_enf.jpg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-            <a href="#">Điều hoà abc</a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 6</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
-
-          <div class="product column" id="firstClone">
-            <img src="./image/250_810_v_enf.jpg" alt="">
-            <a href="#">Điều hoà sx</a>
-            <p id="price-sale">9.390.000đ</p>
-            <p id="price">9.850.000đ (-15%)</p>
-            <p>Miễn phí lắp đặt</p>
-            <p>Miễn phí vận chuyển</p>
+          <div class="card product column" >
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà hitachi 1 ngựa, chạy vô tư 7</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
           </div>
+          <div class="card product column" id="firstClone">
+            <img class="card-img-top" src="./image/250_810_v_enf.jpg" alt="Card image" style="width:100%">
+            <div class="card-body p-0">
+              <a href="#" class="card-title stretched-link">Điều hoà abc</a>
+              <div class="mt-2 small">
+                <p id="price-sale">9.390.000đ</p>
+                <p id="price">9.850.000đ (-15%)</p>
+                <p>Miễn phí lắp đặt</p>
+                <p>Miễn phí vận chuyển</p>              
+              </div>
+            </div>
+          </div>
+          
         </div>
         <!-- Next and previous buttons -->
         <button class="prev" id="prevProduct">&#10094;</button>
