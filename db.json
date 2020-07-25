@@ -2,27 +2,23 @@
   "user": [
     {
       "name": "mai vinh lam",
-      "id": "1"
-    },
-    {
-      "id": "2",
-      "name": "mai vinh dang khoi"
+      "phone": "0358443254",
+      "id": "nT-qYqRYF"
     },
     {
       "name": "truong thi na",
-      "id": "EhlrbYemj"
+      "phone": "0328338131",
+      "id": "NPltSHSIU"
     },
     {
       "name": "truong le na",
-      "id": "3Vu2FaYvD"
+      "phone": "12312310",
+      "id": "E-Xutv0MX"
     },
     {
-      "name": "no a na",
-      "id": "CYDvp4jSn"
-    },
-    {
-      "name": "oke",
-      "id": "5Ha0esRat"
+      "name": "mai vinh dang khoi",
+      "phone": "123",
+      "id": "Dl1rDdW-p"
     }
   ]
 }

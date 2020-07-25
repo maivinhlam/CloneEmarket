@@ -11,7 +11,7 @@ router.get("/search", controller.search);
 
 router.get("/create", controller.create);
 
-router.post("/create", controller.createPost);
+router.post("/create", controller.postCreate);
 
 router.get("/:id", controller.viewUser);
 
