@@ -1,0 +1,246 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dddddd;
+  margin: auto;
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  color: red;
+}
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+.listProduct__title {
+  position: relative;
+}
+
+.listProduct__title > * {
+  display: inline-block;
+}
+
+.listProduct__title::first-child {
+  float: left;
+}
+
+.listProduct__title::first-child::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.listProduct__title a {
+  position: absolute;
+  right: 5px;
+  top: 30%;
+}
+
+.listProduct__title:first-child::before {
+  content: "";
+  border: solid 20px transparent;
+  border-left-color: red;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+
+.listProduct__product {
+  padding: 10px 20px;
+  border: 0.1px #dddddd93 solid;
+}
+
+.listProduct__product:hover {
+  border: 0.1px #c9c7c7 solid;
+}
+
+.listProduct__product > * {
+  display: block;
+}
+
+.listProduct__product {
+  /* display: none; */
+  display: inline-block;
+  /* width: 240px; */
+  /* padding: 20px; */
+}
+
+.listProduct__product a {
+  text-decoration: none;
+  color: #161313;
+}
+
+.listProduct__product p {
+  color: red;
+}
+
+.listProduct__product.active {
+  display: inline-block;
+}
+
+.listProduct__product #price-sale {
+  font-weight: bold;
+}
+
+.listProduct__product #price {
+  text-decoration: line-through;
+  color: #a8a6a6;
+}
+
+.listProduct {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 7px 5px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #f1f1f1;
+  left: 0px;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  left: auto;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(141, 127, 127, 0.8);
+}
+
+/* Main menu */
+.main-menu div:first-child {
+  z-index: 999;
+  box-shadow: 0 1rem 3rem rgba(151, 104, 104, 0.18) !important;
+}
+
+.main-menu .title {
+  position: relative;
+}
+
+.main-menu .list {
+  position: absolute;
+  z-index: 10;
+}
+
+img {
+  width: 100%;
+}
+
+/* ////////////////////////// */
+.carousel-indicators {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.carousel-indicators li {
+  width: 20%;
+  text-indent: unset !important;
+  height: unset;
+  z-index: 99;
+  /* opacity: 1; */
+}
+
+.carousel-indicators li:hover {
+  transform: scale(1.8);
+  opacity: 1;
+  z-index: 1000;
+}
+
+.carousel-indicators .active {
+  transform: scale(1.4);
+  z-index: 999;
+}
+@media screen and (max-width: 975px) {
+  .carousel-indicators li img {
+    display: none;
+  }
+}
+
+/* navbar for mobile */
+
+#navbar-mobile nav {
+  padding: 0;
+}
+
+#navbar-mobile .navbar-brand {
+  margin-right: 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgb(223, 143, 143);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  /* text-align:center; */
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #db4848;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
