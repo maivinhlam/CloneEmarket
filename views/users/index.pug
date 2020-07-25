@@ -1,20 +1,24 @@
-doctype html
-html(lang='en')
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title Document
-  body   
-    h1 Users
-    a(href="/users/create") Create User
-    form(action='users/search', mothod="GET")
-        input(type="text", name="q" )
-        button Search
-    ul  
-      each user in users
-        li
-            span= user.name
-            span &nbsp;
-            a(href="/users/" + user.id) View
+extends ../layout/common
 
-        
+block content
+  h1 
+    span Users
+    a.btn.btn-primary.ml-3.small(href="/users/create") New
+  
+  form.form-inline.my-2.my-lg-0(action='users/search', mothod="GET")
+    input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search', name="q")
+    button.btn.btn-outline-success.my-2.my-sm-0 Search
+  
+  table.table.mt-3
+    thead
+      tr
+        th Name
+        th Phone
+        th
+    tbody      
+      each user in users
+        tr
+          td= user.name
+          td= user.phone          
+          td
+            a(href="/users/" + user.id) View
