@@ -14,11 +14,13 @@ block content
       tr
         th Name
         th Phone
+        th Email
         th
     tbody      
       each user in users
         tr
           td= user.name
-          td= user.phone          
+          td= user.phone 
+          td= user.email                   
           td
             a(href="/users/" + user.id) View

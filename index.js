@@ -1,6 +1,9 @@
 const express = require("express");
 var cookieParser = require('cookie-parser');
+
 var userRoute = require('./routers/user.route');
+var authRoute = require('./routers/auth.route');
+var authMiddleware = require('./middlewares/auth.middleware')
 var db = require('./db');
 
 const port = 3000;
@@ -20,8 +23,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use('/users', userRoute);
-
+app.use('/users', authMiddleware.requireAuth, userRoute);
+app.use('/auth', authRoute);
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)

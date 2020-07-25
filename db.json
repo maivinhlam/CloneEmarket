@@ -1,5 +1,5 @@
 {
-  "user": [
+  "users": [
     {
       "name": "mai vinh lam",
       "phone": "0358443254",
@@ -29,6 +29,21 @@
       "name": "check",
       "phone": "1",
       "id": "I9Jg3Wo7d"
+    },
+    {
+      "email": "maivinhlam910@gmail.com",
+      "password": "12312310",
+      "name": "mai vinh lam",
+      "phone": "0358443254",
+      "id": "A2IWKsI2R"
+    },
+    {
+      "email": "123",
+      "password": "456",
+      "name": "123",
+      "phone": "2",
+      "id": "EqbnwHok2"
     }
-  ]
+  ],
+  "user": []
 }

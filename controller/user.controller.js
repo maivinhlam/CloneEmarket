@@ -2,13 +2,13 @@ var db = require("../db");
 const shortid = require("shortid");
 module.exports.index = (req, res) => {
     res.render("users/index", {
-      users: db.get("user").value(),
+      users: db.get("users").value(),
     });
 };
 
 module.exports.search = (req, res) => {
     var q = req.query.q;
-    var matchedUsers = db.get('user')
+    var matchedUsers = db.get('users')
                         .filter({name: q})
                         .value();
     
@@ -27,7 +27,7 @@ module.exports.create = (req, res) => {
 
 module.exports.postCreate = (req, res) => {
     req.body.id = shortid.generate();    
-    db.get("user").push(req.body).write();
+    db.get("users").push(req.body).write();
 
     res.redirect("/users");
   };
@@ -35,7 +35,7 @@ module.exports.postCreate = (req, res) => {
 module.exports.viewUser = (req, res) => {
     var id = req.params.id;
   
-    var user = db.get("user").find({ id: id }).value();
+    var user = db.get("users").find({ id: id }).value();
     console.log(user);
     res.render("users/view", {
       user: user,
