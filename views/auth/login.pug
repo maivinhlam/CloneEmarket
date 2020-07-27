@@ -11,10 +11,10 @@ block content
 
     form(method="post")
         .form-group
-            labe() Email
+            labe(for='email') Email
             input#name.form-control.mr-sm-2(type='text', placeholder='Email', aria-label='email', name="email", value= values ? values.email : "")                
         .form-group
-            labe() Password
+            labe(for='password') Password
             input#name.form-control.mr-sm-2(type='password', placeholder='Password', aria-label='password', name="password")
         
         button.btn.btn-primary Login

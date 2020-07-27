@@ -12,6 +12,7 @@ block content
   table.table.mt-3
     thead
       tr
+        th Avatar
         th Name
         th Phone
         th Email
@@ -19,6 +20,8 @@ block content
     tbody      
       each user in users
         tr
+          td
+            img(src="" + user.avatar, alt="", style="width: 50px")
           td= user.name
           td= user.phone 
           td= user.email                   
