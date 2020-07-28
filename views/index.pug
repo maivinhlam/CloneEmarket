@@ -1,5 +1,140 @@
 extends layout/common
 
 block content
-  h1 Hello #{name}
-  a(href="/users") Users
+  section.jumbotron.text-center
+    .container
+      h1.jumbotron-heading E-COMMERCE CATEGORY
+      p.lead.text-muted.mb-0
+        | Le Lorem Ipsum est simplement du faux texte employ&eacute; dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l&apos;imprimerie depuis les ann&eacute;es 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour r&eacute;aliser un livre sp&eacute;cimen de polices de texte...
+  .container
+    .row
+      .col
+        nav(aria-label='breadcrumb')
+          ol.breadcrumb
+            li.breadcrumb-item
+              a(href='index.html') Home
+            li.breadcrumb-item
+              a(href='category.html') Category
+            li.breadcrumb-item.active(aria-current='page') Sub-category
+  .container
+    .row
+      .col-12.col-sm-3
+        .card.bg-light.mb-3
+          .card-header.bg-primary.text-white.text-uppercase
+            i.fa.fa-list
+            |  Categories
+          ul.list-group.category_block
+            li.list-group-item
+              a(href='category.html') Cras justo odio
+            li.list-group-item
+              a(href='category.html') Dapibus ac facilisis in
+            li.list-group-item
+              a(href='category.html') Morbi leo risus
+            li.list-group-item
+              a(href='category.html') Porta ac consectetur ac
+            li.list-group-item
+              a(href='category.html') Vestibulum at eros
+        .card.bg-light.mb-3
+          .card-header.bg-success.text-white.text-uppercase Last product
+          .card-body
+            img.img-fluid(src='https://dummyimage.com/600x400/55595c/fff')
+            h5.card-title Product title
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+            p.bloc_left_price 99.00 $
+      .col
+        .row
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12.col-md-6.col-lg-4
+            .card
+              img.card-img-top(src='https://dummyimage.com/600x400/55595c/fff', alt='Card image cap')
+              .card-body
+                h4.card-title
+                  a(href='product.html', title='View Product') Product title
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                .row
+                  .col
+                    p.btn.btn-danger.btn-block 99.00 $
+                  .col
+                    a.btn.btn-success.btn-block(href='#') Add to cart
+          .col-12
+            nav(aria-label='...')
+              ul.pagination
+                li.page-item.disabled
+                  a.page-link(href='#', tabindex='-1') Previous
+                li.page-item
+                  a.page-link(href='#') 1
+                li.page-item.active
+                  a.page-link(href='#')
+                    | 2 
+                    span.sr-only (current)
+                li.page-item
+                  a.page-link(href='#') 3
+                li.page-item
+                  a.page-link(href='#') Next
+  

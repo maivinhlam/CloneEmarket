@@ -1,0 +1,30 @@
+block navbar
+	nav.navbar.navbar-expand-md.navbar-dark.bg-dark
+			.container
+				a.navbar-brand(href='index.html') Simple Ecommerce
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
+					span.navbar-toggler-icon
+				#navbarsExampleDefault.collapse.navbar-collapse.justify-content-end
+					ul.navbar-nav.m-auto
+						li.nav-item
+							a.nav-link(href='/') Home
+						li.nav-item.active
+							a.nav-link(href='category.html')
+								| Categories 
+								span.sr-only (current)
+						li.nav-item
+							a.nav-link(href='/products') Product
+						li.nav-item
+							a.nav-link(href='cart.html') Cart
+						li.nav-item
+							a.nav-link(href='/users') Users
+					form.form-inline.my-2.my-lg-0
+						.input-group.input-group-sm
+							input.form-control(type='text', aria-label='Small', aria-describedby='inputGroup-sizing-sm', placeholder='Search...')
+							.input-group-append
+								button.btn.btn-secondary.btn-number(type='button')
+									i.fa.fa-search
+							a.btn.btn-success.btn-sm.ml-3(href='cart.html')
+								i.fa.fa-shopping-cart
+								|  Cart 
+								span.badge.badge-light 3
