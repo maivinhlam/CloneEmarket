@@ -5,8 +5,8 @@ module.exports.login = (req, res) => {
 };
 
 module.exports.postLogin = (req, res) => {
-  const { myEmail } = req.body;
-  const { myPassword } = req.body;
+  const myEmail = req.body.email;
+  const myPassword = req.body.password;
 
   const user = db.get('users').find({ email: myEmail }).value();
   if (!user) {

@@ -758,9 +758,12 @@
       "price": "229597.96"
     }
   ],
-  "session": [
+  "sessions": [
     {
-      "id": "I-Rrh8JK_"
+      "id": "I-Rrh8JK_",
+      "cart": {
+        "c2c126ed-1cac-4ced-95d8-437a9a0a4ae1": 1
+      }
     }
   ]
 }

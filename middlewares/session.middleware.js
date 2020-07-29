@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
       signed: true,
     });
 
-    db.get('session').push({
+    db.get('sessions').push({
       id: sessionId,
     }).write();
   }
