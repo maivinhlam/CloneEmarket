@@ -6,16 +6,16 @@ block navbar
 					span.navbar-toggler-icon
 				#navbarsExampleDefault.collapse.navbar-collapse.justify-content-end
 					ul.navbar-nav.m-auto
-						li.nav-item
-							a.nav-link(href='/') Home
 						li.nav-item.active
+							a.nav-link(href='/') Home
+						li.nav-item
 							a.nav-link(href='category.html')
 								| Categories 
 								span.sr-only (current)
 						li.nav-item
 							a.nav-link(href='/products') Product
 						li.nav-item
-							a.nav-link(href='cart.html') Cart
+							a.nav-link(href='/cart') Cart
 						li.nav-item
 							a.nav-link(href='/users') Users
 					form.form-inline.my-2.my-lg-0
@@ -24,10 +24,10 @@ block navbar
 							.input-group-append
 								button.btn.btn-secondary.btn-number(type='button')
 									i.fa.fa-search
-							a.btn.btn-success.btn-sm.ml-3(href='cart.html')
+							a.btn.btn-success.btn-sm.ml-3(href='/cart')
 								i.fa.fa-shopping-cart
 								|  Cart 
-								span.badge.badge-light 3
+								span.badge.badge-light#count-product 3
 
 				
 			if (user)
