@@ -1,6 +1,24 @@
 extends ../layout/common
 
 block content
-
+  table.table.mt-3
+    thead
+      tr   
+        th Image    
+        th Name
+        th Price
+        th Count
+        th 
+    tbody      
+      each product in products
+        tr
+          td 
+            img(src="./" + product.image_main, alt="", style="height: 50px")
+          td= product.name
+          td.money= product.price
+          td= product.count                   
+      tr 
+        td Sum
+        td.money.text-danger= price          
 
   script(src="/js/myJS.js")

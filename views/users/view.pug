@@ -1,6 +1,16 @@
-h1 View user
-a(href="/users/") User
-p   
-    b Name 
-    span &nbsp;
-    span= user.name
+extends ../layout/common
+
+block content
+    h1 View user
+    
+    table.table.mt-3
+        tbody 
+            tr
+                each u in user
+                    td
+                        img(src="/" + u.avatar, alt="",style="width: 50px") 
+                    td= u.email
+                    td= u.name
+                    td= u.phone
+                    
+                    

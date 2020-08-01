@@ -1,23 +1,25 @@
 extends ../layout/common
 
 block content
-    h1 Products
+    h1         
+        span Products
+        a.btn.btn-primary.ml-3.small(href="/products/create") New
 
     .container
         .row
             each product in products
-                .col-12.col-md-6.col-lg-4
+                .col-12.col-md-6.col-lg-3
                     .card
-                        img.card-img-top(src= product.image, alt='Card image cap')
+                        img.card-img-top(src= product.image_main, alt='Card image cap')
                         .card-body
                             h4.card-title
                                 a.stretched-link(href='product.html', title='View Product')= product.name
-                            p.card-text.overflow-hidden= product.decription
+                            p.card-text.overflow-hidden= product.description
                             .row
                                 .col
                                     p.btn.btn-danger.btn-block.product-price= product.price
                                 .col
-                                    a.btn.btn-success.btn-block(href='/cart/add/' + product.id) Add to cart
+                                    a.btn.btn-success.btn-block(href='/cart/add/' + product.product_id) Add to cart
             
 
 

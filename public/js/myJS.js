@@ -3,6 +3,10 @@ $(document).ready(function () {
     $(element).text(formatCurrency($(element).text()));
   });
 
+  $(".money").each(function (index, element) {
+    $(element).text(formatCurrency($(element).text()));
+  });
+
   if (getCookie("countProduct")) {
     $("#count-product").text(getCookie("countProduct"));
   }

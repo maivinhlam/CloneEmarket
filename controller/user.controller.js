@@ -2,21 +2,24 @@ var db = require("../db");
 const shortid = require("shortid");
 
 module.exports.index = (req, res) => {
-  res.render("users/index", {
-    users: db.get("users").value(),
+  let sql = "SELECT * FROM users";
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    console.log(result);
+    res.render("users/index", {
+      users: result,
+    });
   });
 };
 
 module.exports.search = (req, res) => {
   var q = req.query.q;
-  var matchedUsers = db.get("users").filter({ name: q }).value();
-
-  // var matchedUsers = users.filter((user) => {
-  //   return user.name.toLowerCase().indexOf(q.toLowerCase()) !== -1;
-  // });
-
-  res.render("users/index", {
-    users: matchedUsers,
+  let sql = "SELECT * FROM users WHERE name like '%" + q + "%'";
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    res.render("users/index", {
+      users: result,
+    });
   });
 };
 
@@ -25,20 +28,28 @@ module.exports.create = (req, res) => {
 };
 
 module.exports.postCreate = (req, res) => {
-  req.body.id = shortid.generate();
-  req.body.avatar = req.file.path.split("\\").slice(1).join("\\");
-  console.log(req.file.path);
-  db.get("users").push(req.body).write();
-
-  res.redirect("/users");
+  let id = shortid.generate();
+  let avatar = req.file.path.split("\\").slice(1).join("\\");
+  let email = req.body.email;
+  let name = req.body.name;
+  let password = req.body.password;
+  let phone = req.body.phone;
+  let sql = "INSERT INTO users VALUES ?";
+  let values = [[id, email, password, name, phone, avatar]];
+  db.query(sql, [values], function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+    res.redirect("/users");
+  });
 };
 
 module.exports.viewUser = (req, res) => {
-  var id = req.params.id;
-
-  var user = db.get("users").find({ id: id }).value();
-  console.log(user);
-  res.render("users/view", {
-    user: user,
+  let id = req.params.id;
+  let sql = "SELECT * FROM users WHERE user_id = ?";
+  db.query(sql, [id], function (err, result) {
+    if (err) throw err;
+    res.render("users/view", {
+      user: result,
+    });
   });
 };

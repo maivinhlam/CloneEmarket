@@ -8,26 +8,34 @@ module.exports.postLogin = (req, res) => {
   const myEmail = req.body.email;
   const myPassword = req.body.password;
 
-  const user = db.get("users").find({ email: myEmail }).value();
-  if (!user) {
-    res.render("auth/login", {
-      errors: ["User dose not exits."],
-      values: req.body,
-    });
-    return;
-  }
+  // const user = db.get("users").find({ email: myEmail }).value();
+  let sql = "SELECT * FROM users WHERE email=?";
+  let user;
+  db.query(sql, [myEmail], (err, result) => {
+    if (err) throw err;
 
-  if (user.password !== myPassword) {
-    res.render("auth/login", {
-      errors: ["Wrong password."],
-      values: req.body,
-    });
-    return;
-  }
+    user = result;
 
-  res.cookie("userId", user.id, {
-    signed: true,
+    if (!user) {
+      res.render("auth/login", {
+        errors: ["User dose not exits."],
+        values: req.body,
+      });
+      return;
+    }
+
+    if (user[0].password !== myPassword) {
+      res.render("auth/login", {
+        errors: ["Wrong password."],
+        values: req.body,
+      });
+      return;
+    }
+
+    res.cookie("userId", user[0].user_id, {
+      signed: true,
+    });
+
+    res.redirect("/users");
   });
-
-  res.redirect("/users");
 };

@@ -6,7 +6,7 @@ const controller = require("../controller/user.controller");
 const validate = require("../validate/user.validate");
 const authMiddleware = require("../middlewares/auth.middleware");
 
-const upload = multer({ dest: "./public/uploads/" });
+const upload = multer({ dest: "./public/uploads/users" });
 
 const router = express.Router();
 

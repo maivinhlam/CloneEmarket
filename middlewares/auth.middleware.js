@@ -5,15 +5,22 @@ module.exports.requireAuth = (req, res, next) => {
     res.redirect("/auth/login");
     return;
   }
+  let sql = "SELECT * FROM users where user_id=?";
+  let userId = [req.signedCookies.userId];
+  let user;
+  db.query(sql, [userId], (err, result) => {
+    if (err) throw err;
 
-  const user = db.get("users").find({ id: req.signedCookies.userId }).value();
+    user = result;
+    if (!user) {
+      res.redirect("/auth/login");
+      return;
+    }
 
-  if (!user) {
-    res.redirect("/auth/login");
-    return;
-  }
+    res.locals.user = user;
 
-  res.locals.user = user;
+    next();
+  });
 
-  next();
+  // const user = db.get("users").find({ id: req.signedCookies.userId }).value();
 };

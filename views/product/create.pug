@@ -1,0 +1,32 @@
+
+extends ../layout/common
+
+block content   
+    h1 Create Product
+
+    if errors
+        each error in errors
+            .alert.alert-danger= error
+        
+
+    form(action="/products/create", method="post", enctype="multipart/form-data")
+        .form-group
+          label(for='product_type') Product type
+          select#product_type.form-control(name="product_type")
+            option Open this select menu
+            each p in product_type
+              option(value=p.type_id)= p.name        
+        .form-group
+          labe(for='name') Name
+          input#name.form-control.mr-sm-2(type='text', placeholder='Name', aria-label='Name', name="name", 
+              value= values ? values.name : "")
+        .form-group
+          labe(for='phone') Description
+          input#phone.form-control.mr-sm-2(type='text', placeholder='Description', aria-label='description', name="description", value= values ? values.description : "")
+        .form-group
+          labe(for='price') Price
+          input#price.form-control.mr-sm-2(type='text', placeholder='Price', aria-label='price', name="price", value= values ? values.price : "")      
+        .form-group
+          labe(for='image') Image            
+          input#image.form-control-file(name="image", type="file")
+        button.btn.btn-primary Create

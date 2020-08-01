@@ -5,25 +5,28 @@ block content
     span Users
     a.btn.btn-primary.ml-3.small(href="/users/create") New
   
-  form.form-inline.my-2.my-lg-0(action='users/search', mothod="GET")
+  form.form-inline.my-2.my-lg-0(action="/users/search", mothod="GET")
     input.form-control.mr-sm-2(type='search', placeholder='Search', aria-label='Search', name="q")
     button.btn.btn-outline-success.my-2.my-sm-0 Search
   
+  
   table.table.mt-3
     thead
-      tr
-        th Avatar
+      tr   
+        th Avatar    
+        th Email
         th Name
         th Phone
-        th Email
-        th
+        th 
     tbody      
       each user in users
         tr
-          td
-            img(src="" + user.avatar, alt="", style="width: 50px")
+          td 
+            img(src="/" + user.avatar, alt="", style="height: 50px")
+          td= user.email
           td= user.name
-          td= user.phone 
-          td= user.email                   
+          td= user.phone                   
           td
-            a(href="/users/" + user.id) View
+            a(href="/users/" + user.user_id) View
+            
+  script(src="/js/myJS.js")
