@@ -22,11 +22,26 @@ class User {
     });
   }
 
-  getUser() {
+  static getUser(next) {
     let sql = "SELECT * FROM users";
     db.query(sql, (err, result) => {
       if (err) throw err;
-      return result;
+      next(null, result);
+    });
+  }
+
+  static getUserWithId(id, next) {
+    let sql = "SELECT * FROM users WHERE user_id = ?";
+    db.query(sql, [id], function (err, result) {
+      if (err) throw err;
+      next(null, result);
+    });
+  }
+  static searchUserName(name, next) {
+    let sql = "SELECT * FROM users WHERE name like '%" + name + "%'";
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      next(null, result);
     });
   }
 }

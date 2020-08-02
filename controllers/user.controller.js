@@ -1,25 +1,26 @@
 var db = require("../db");
 const shortid = require("shortid");
+const Promise = require("promise");
 const User = require("../models/users.model");
+
 module.exports.index = (req, res) => {
-  let sql = "SELECT * FROM users";
-  db.query(sql, (err, result) => {
-    if (err) throw err;
-    console.log(result);
-    res.render("users/index", {
-      users: result,
-    });
+  User.getUser((err, data) => {
+    if (!err) {
+      res.render("users/index", {
+        users: data,
+      });
+    }
   });
 };
 
 module.exports.search = (req, res) => {
   var q = req.query.q;
-  let sql = "SELECT * FROM users WHERE name like '%" + q + "%'";
-  db.query(sql, (err, result) => {
-    if (err) throw err;
-    res.render("users/index", {
-      users: result,
-    });
+  User.searchUserName(q, (err, data) => {
+    if (!err) {
+      res.render("users/index", {
+        users: data,
+      });
+    }
   });
 };
 
@@ -37,16 +38,17 @@ module.exports.postCreate = (req, res) => {
 
   let user = new User(id, email, password, name, phone, avatar);
   user.save();
+
   res.redirect("/users");
 };
 
 module.exports.viewUser = (req, res) => {
   let id = req.params.id;
-  let sql = "SELECT * FROM users WHERE user_id = ?";
-  db.query(sql, [id], function (err, result) {
-    if (err) throw err;
-    res.render("users/view", {
-      user: result,
-    });
+  User.getUserWithId(id, (err, data) => {
+    if (!err) {
+      res.render("users/view", {
+        users: data,
+      });
+    }
   });
 };
