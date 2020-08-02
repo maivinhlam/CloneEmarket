@@ -1,6 +1,6 @@
 var db = require("../db");
 const shortid = require("shortid");
-
+const User = require("../models/users.model");
 module.exports.index = (req, res) => {
   let sql = "SELECT * FROM users";
   db.query(sql, (err, result) => {
@@ -34,13 +34,10 @@ module.exports.postCreate = (req, res) => {
   let name = req.body.name;
   let password = req.body.password;
   let phone = req.body.phone;
-  let sql = "INSERT INTO users VALUES ?";
-  let values = [[id, email, password, name, phone, avatar]];
-  db.query(sql, [values], function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-    res.redirect("/users");
-  });
+
+  let user = new User(id, email, password, name, phone, avatar);
+  user.save();
+  res.redirect("/users");
 };
 
 module.exports.viewUser = (req, res) => {

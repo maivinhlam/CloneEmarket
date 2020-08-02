@@ -2,7 +2,7 @@ const express = require("express");
 const multer = require("multer");
 
 const db = require("../db");
-const controller = require("../controller/user.controller");
+const controller = require("../controllers/user.controller");
 const validate = require("../validate/user.validate");
 const authMiddleware = require("../middlewares/auth.middleware");
 

@@ -1,5 +1,5 @@
 const express = require("express");
-const controller = require("../controller/product.controller");
+const controller = require("../controllers/product.controller");
 const validate = require("../validate/product.validate");
 const multer = require("multer");
 const upload = multer({ dest: "./public/uploads/products" });
