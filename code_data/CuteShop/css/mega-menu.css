@@ -1,0 +1,52 @@
+@media screen and (min-width: 992px) {
+  /* remove the padding from the navbar so the dropdown hover state is not broken */
+  /* .navbar {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  } */
+  /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+  .megamenu .nav-item {
+    padding: .5rem .5rem;
+    margin: 0 .25rem;
+  }
+  /* makes the dropdown full width  */
+  .have-sub-menu.megamenu {
+    position: static;
+  }
+  .megamenu-content {
+    width: 100%;
+    left: 0;
+    right: 0;
+    /*  height of nav-item  */
+    /* top: 45px; */
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+    margin: 0 !important;
+    border: 1px solid rgba(0, 0, 0, .15);
+    background-color: #fff;
+  }
+  .megamenu-content a {
+    color: #000 !important;
+  }
+  .megamenu-content a:hover {
+    color: red !important;
+  }
+  /* shows the dropdown menu on hover */
+  .navbar .megamenu:hover .megamenu-content, .megamenu-content:hover {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+  .navbar .dropdown-toggle {
+    position: relative;
+  }
+  .navbar .dropdown-toggle::after {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    right: 45%;
+  }
+}

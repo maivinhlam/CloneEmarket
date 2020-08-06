@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cute Shop</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mega-menu.css" />
   <link rel="stylesheet" href="./css/global-style.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -26,7 +27,8 @@
     <div class="header-top">
       <div class="container">
         <div class="row">
-          <div class="header-top-left col-lg-7 col-sm-12 d-flex row small px-0 m-0 justify-content-sm-center">
+          <div
+            class="header-top-left col-lg-7 col-sm-12 d-flex row small px-0 m-0 justify-content-sm-center flex-lg-row flex-md-column">
             <ul class="nav justify-content-center pr-0 m-auto">
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">
@@ -64,7 +66,7 @@
               <a class="nav-link active text-white" href="#">Services</a>
               <a class="nav-link active text-white" href="#">Support</a>
               <a class="nav-link active text-white" href="#">
-                <i class="fas fa-shopping-cart fa-2x"></i>
+                <i class="fas fa-shopping-cart"></i>
                 <span class="badge badge-warning">0</span>
               </a>
 
@@ -76,12 +78,12 @@
     <div class="header-nav">
       <div class="container">
         <div class="row">
-          <div class="logo col-md-3 d-flex align-items-center justify-content-center">
+          <div class="logo col-md-4 col-lg-3 d-flex align-items-center justify-content-center">
             <a href="#">
-              <img src="./image/Logo-07.webp" alt="" class="m-auto">
+              <img src="./image/Logo-07.webp" alt="" class="m-auto py-2 py-md-0">
             </a>
           </div>
-          <div class="mainmenu col-md-9 p-0">
+          <div class="mainmenu col-md-8 col-lg-9 p-0">
             <nav
               class="navbar navbar-expand-lg navbar-dark py-0 ml-0 justify-content-center justify-content-sm-center justify-content-md-between">
               <a class="navbar-brand" href="#"></a>
@@ -104,14 +106,14 @@
                     <a class="nav-link  dropdown-toggle active  p-4" href="#">Food</a>
                   </li>
                   <!-- Dropdown -->
-                  <li class="nav-item dropdown">
+                  <li class="nav-item dropdown have-sub-menu megamenu">
                     <a class="nav-link dropdown-toggle active p-4" href="#" id="navbardrop"
                       data-toggle="dropdown">Shop</a>
-                    <div class="mega_menu dropdown-menu border-0 clearfix">
+                    <div class="megamenu-content dropdown-menu border-0 clearfix">
                       <div class="dropdown-item">
                         <div class="row">
-                          <div class="col-9 small text-body row">
-                            <div class="col-4">
+                          <div class="col-9 small text-body row ">
+                            <div class="col-4 py-3">
                               <h4 class="title">
                                 <span class="active text-body border-top-0 border-left-0 border-right-0 border-title"
                                   href="#">Active</span>
@@ -128,7 +130,7 @@
                                 </li>
                               </ul>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 py-3">
                               <h4 class="title">
                                 <span
                                   class="active text-body border border-danger border-top-0 border-left-0 border-right-0"
@@ -146,7 +148,7 @@
                                 </li>
                               </ul>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 py-3">
                               <h4 class="title">
                                 <span
                                   class="active text-body border border-danger border-top-0 border-left-0 border-right-0"
@@ -164,7 +166,7 @@
                                 </li>
                               </ul>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 py-3">
                               <h4 class="title">
                                 <span
                                   class="active text-body border border-danger border-top-0 border-left-0 border-right-0"
@@ -203,63 +205,103 @@
     <div class="header-services container-fluid mb-3 py-2">
       <div class="container ">
         <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex ">
-            <figure class="m-auto w-25">
+          <div class="col-md-6 col-lg-3 d-flex px-0">
+            <figure class="m-auto">
               <img src="image/07_Home-1.webp" alt="" srcset="">
             </figure>
             <h6 class="m-auto w-75">WORLDWIDE DELIVERY</h6>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ">
-            <figure class="m-auto w-25">
+          <div class="col-md-6 col-lg-3 d-flex px-0">
+            <figure class="m-auto">
               <img src="image/07_Home-2.webp" alt="" srcset="">
             </figure>
             <h6 class="m-auto w-75">24/7 HELP CENTER</h6>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ">
-            <figure class="m-auto w-25">
+          <div class="col-md-6 col-lg-3 d-flex px-0">
+            <figure class="m-auto">
               <img src="image/07_Home-3.webp" alt="" srcset="">
             </figure>
             <h6 class="m-auto w-75">SHOP WITH CONFIDENCE</h6>
           </div>
 
-          <div class="col-md-6 col-lg-3 d-flex ">
-            <figure class="m-auto w-25">
+          <div class="col-md-6 col-lg-3 d-flex px-0">
+            <figure class="m-auto">
               <img src="image/07_Home-4.webp" alt="" srcset="">
             </figure>
             <h6 class="m-auto w-75">SAFE PAYMENT</h6>
           </div>
-
+          <!-- <ul class="list-group list-group-horizontal w-100 flex-wrap">
+            <li class="list-group-item flex-fill">
+              <figure class="m-auto">
+                <img src="image/07_Home-1.webp" alt="" srcset="">
+              </figure>
+              <h6 class="m-auto w-75">WORLDWIDE DELIVERY</h6>
+            </li>
+            <li class="list-group-item flex-fill">
+              <figure class="m-auto">
+                <img src="image/07_Home-2.webp" alt="" srcset="">
+              </figure>
+              <h6 class="m-auto w-75">24/7 HELP CENTER</h6>
+            </li>
+            <li class="list-group-item flex-fill">
+              <figure class="m-auto">
+                <img src="image/07_Home-3.webp" alt="" srcset="">
+              </figure>
+              <h6 class="m-auto w-75">SHOP WITH CONFIDENCE</h6>
+            </li>
+            <li class="list-group-item flex-fill">
+              <figure class="m-auto">
+                <img src="image/07_Home-4.webp" alt="" srcset="">
+              </figure>
+              <h6 class="m-auto w-75">SAFE PAYMENT</h6>
+            </li>
+          </ul> -->
         </div>
       </div>
     </div>
     <div class="header-sidebar container">
       <div class="row">
-        <div class="col-3 pr-0">
+        <div class="col-3 px-0">
           <div class="header-sidebar-title title bg-secondary text-white d-flex">
             <i class="fa fa-bars p-3 bg-dark text-white" aria-hidden="true"></i>
-            <h5 class=" flex-grow-1 m-auto text-right pr-4 text-uppercase font-weight-bold">CATEGORIES</h5>
+            <span class=" flex-grow-1 m-auto text-right pr-4 text-uppercase font-weight-bold">CATEGORIES</span>
           </div>
-          <div class="header-sidebar-content">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="" href="#">Link</a>
-              </li>
+          <div class="header-sidebar-content w-100">
+            <ul class="nav flex-column w-100">
+              <!-- <div class="dropdown dropright nav-item">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                  Dropright button
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Link 1</a>
+                  <a class="dropdown-item" href="#">Link 2</a>
+                  <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+              </div> -->
             </ul>
+            <div class="list-group w-100">
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">First item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Second item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Third item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Four item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Five item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Six item</a>
+              </div>
+              <div class="list-group-item list-group-item-action dropdown dropright">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seven item</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-9 search pl-0">
@@ -280,8 +322,8 @@
                       placeholder="i'm searching for ...">
                   </td>
                   <td class="w-2 p-0">
-                    <button class="border-0 p-0 h-100">
-                      <span class="input-group-text h-100 border  rounded-0 ">
+                    <button class="border-0 p-0 h-100 btn btn-default">
+                      <span class="input-group-text h-100 border bg-transparent rounded-0 ">
                         <i class="fa fa-search p-1" aria-hidden="true"></i>
                       </span>
                     </button>
