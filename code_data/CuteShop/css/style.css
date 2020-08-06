@@ -32,6 +32,54 @@ body {
   color: black !important;
 }
 
+/* hoverborder */
+
+.hoverborder {
+  position: relative;
+}
+
+.hoverborder::before {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 0%;
+  border: 6px solid transparent;
+  bottom: 5%;
+  left: 5%;
+  /* height: 90%;
+  width: 90%; */
+}
+
+.hoverborder:hover::before {
+  height: 90%;
+  width: 90%;
+  border: 6px solid white;
+  border-right: 0;
+  border-bottom: 0;
+  transition: height 0.5s linear, width 0.5s linear 0.5s;
+}
+
+.hoverborder::after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 0%;
+  border: 6px solid transparent;
+  top: 5%;
+  right: 5%;
+  /* height: 90%;
+  width: 90%; */
+}
+
+.hoverborder:hover::after {
+  height: 90%;
+  width: 90%;
+  border: 6px solid white;
+  border-left: 0;
+  border-top: 0;
+  transition: height 0.5s, width 0.5s linear 0.5s;
+}
+
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
     position: fixed;
