@@ -34,16 +34,16 @@
     color: red !important;
   }
   /* shows the dropdown menu on hover */
-  .navbar .megamenu:hover .megamenu-content, .megamenu-content:hover {
+  .megamenu:hover .megamenu-content, .megamenu-content:hover {
     display: block;
     visibility: visible;
     opacity: 1;
     transition: visibility 0s, opacity 0.3s linear;
   }
-  .navbar .dropdown-toggle {
+  .megamenu .dropdown-toggle {
     position: relative;
   }
-  .navbar .dropdown-toggle::after {
+  .megamenu:not(.dropright) .dropdown-toggle::after {
     position: absolute;
     bottom: 0;
     left: 35%;
