@@ -11,11 +11,6 @@ module.exports.addToCart = (req, res) => {
     return;
   }
 
-  // let count = db
-  //   .get("sessions")
-  //   .find({ id: sessionId })
-  //   .get("cart." + productId, 0)
-  //   .value();
   let count = 0;
   let sql =
     "SELECT count FROM `sessions_order` WHERE sessions_id = ? AND product_id = ?";
@@ -36,7 +31,7 @@ module.exports.addToCart = (req, res) => {
     } else {
       const id = shortid.generate();
       sql = "INSERT INTO sessions_order VALUES ?";
-      let values = [[id, sessionId, productId, 1]];
+      let values = [[sessionId, productId, 1]];
       db.query(sql, [values], function (err, result) {
         if (err) throw err;
       });
