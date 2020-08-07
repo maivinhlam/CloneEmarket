@@ -10,7 +10,7 @@
     margin: 0 .25rem;
   }
   /* makes the dropdown full width  */
-  .have-sub-menu.megamenu {
+  .have-sub-menu.megamenu:not(.dropright) {
     position: static;
   }
   .megamenu-content {

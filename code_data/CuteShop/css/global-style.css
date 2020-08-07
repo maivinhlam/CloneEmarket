@@ -5,3 +5,7 @@
 a {
   color: #fff !important;
 }
+
+.cursorhand {
+  cursor: pointer;
+}
