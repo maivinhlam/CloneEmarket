@@ -246,18 +246,40 @@ header {
 
     .listproduct-content-button {
       position: absolute;
-      background-color: rgb(182, 179, 179);
+      // background-color: rgb(182, 179, 179);
       z-index: 999;
       top: 50%;
+      transform: translateY(-50%);
 
       &>div {
         padding: 3px 6px;
+      }
+
+      &-next,
+      &-prev {
+        background-color: rgb(182, 179, 179);
       }
 
       &-next:hover,
       &-prev:hover {
         background-color: rgb(201, 195, 195);
       }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .listproduct {
+    .listproduct-content {
+
+      .listproduct-content-button {
+        width: 100%;
+
+        &-next {
+          transform: translateX(-100%);
+        }
+      }
+
     }
   }
 }
