@@ -28,3 +28,44 @@ function showsidebar() {
     }
   }
 }
+
+$(document).ready(function () {
+  if ($('.listproduct-content-carousel').length) {
+    var viewedSlider = $('.listproduct-content-carousel');
+
+    viewedSlider.owlCarousel(
+      {
+        loop: true,
+        margin: 25,
+        autoplay: false,
+        autoplayTimeout: 6000,
+        nav: false,
+        dots: false,
+        autoWidth: false,
+        responsive:
+        {
+          0: { items: 1 },
+          575: { items: 2 },
+          768: { items: 2 },
+          991: { items: 4 },
+          1199: { items: 4 }
+        }
+      });
+
+    if ($('.listproduct-content-button-prev').length) {
+      var prev = $('.listproduct-content-button-prev');
+      prev.on('click', function () {
+        viewedSlider.trigger('prev.owl.carousel');
+      });
+    }
+
+    if ($('.listproduct-content-button-next').length) {
+      var next = $('.listproduct-content-button-next');
+      next.on('click', function () {
+        viewedSlider.trigger('next.owl.carousel');
+      });
+    }
+  }
+
+
+});

@@ -21,6 +21,9 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 </head>
 
 <body>
@@ -29,7 +32,7 @@
       <div class="container">
         <div class="row">
           <div
-            class="header-top-left col-lg-7 col-sm-12 d-flex row small px-0 m-0 justify-content-sm-center flex-lg-row flex-md-column">
+            class="header-top-left col-lg-7 col-sm-12 d-flex row small px-0 m-0 justify-content-sm-center flex-lg-row flex-column">
             <ul class="nav justify-content-center pr-0 m-auto">
               <li class="nav-item">
                 <a class="nav-link text-white" href="#">
@@ -44,7 +47,7 @@
                 </a>
               </li>
             </ul>
-            <div class="header-top-left-soical nav justify-content-lg-start justify-content-center flex-grow-1 ">
+            <div class="header-top-left-social nav justify-content-lg-start justify-content-center flex-grow-1 ">
               <a class="nav-link active text-white" href="#">
                 <i class="fa fa-facebook"></i>
               </a>
@@ -66,9 +69,9 @@
               <a class="nav-link active text-white" href="#"> My Account</a>
               <a class="nav-link active text-white" href="#">Services</a>
               <a class="nav-link active text-white" href="#">Support</a>
-              <a class="nav-link active text-white" href="#">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="badge badge-warning">0</span>
+              <a class="nav-link active text-white cart" href="#">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span class="badge badge-warning cart-count">0</span>
               </a>
 
             </nav>
@@ -104,12 +107,16 @@
                     <a class="nav-link active p-4" href="#">Fashion</a>
                   </li>
                   <li class="nav-item dropdown have-sub-menu megamenu">
-                    <a class="nav-link  dropdown-toggle active  p-4" href="#">Food</a>
+                    <a class="nav-link  dropdown-toggle active  p-4" href="#">
+                      <span>Food</span>
+                      <i class="fas fa-chevron-down"></i>
+                    </a>
                   </li>
                   <!-- Dropdown -->
                   <li class="nav-item dropdown have-sub-menu megamenu">
-                    <a class="nav-link dropdown-toggle active p-4" href="#" id="navbardrop"
-                      data-toggle="dropdown">Shop</a>
+                    <a class="nav-link dropdown-toggle active p-4" href="#" id="navbardrop" data-toggle="dropdown">
+                      <span>Shop</span>
+                      <i class="fas fa-chevron-down"></i></a>
                     <div class="megamenu-content dropdown-menu border-0 clearfix">
                       <div class="pl-3">
                         <div class="row">
@@ -262,8 +269,9 @@
     </div>
     <div class="header-sidebar container">
       <div class="row">
-        <div class="col-lg-3 col-md-4 px-0">
-          <div class="header-sidebar-title title bg-secondary text-white d-flex cursorhand" onclick="showsidebar()">
+        <div class="col-lg-3 col-md-4 px-0 d-flex">
+          <div class="header-sidebar-title title bg-secondary text-white d-flex cursorhand w-100"
+            onclick="showsidebar()">
             <i class="fa fa-bars p-3 bg-dark text-white" aria-hidden="true"></i>
             <span class=" flex-grow-1 m-auto text-right pr-4 text-uppercase font-weight-bold">CATEGORIES</span>
           </div>
@@ -459,7 +467,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-9 col-md-8 search px-0 py-3 py-md-0">
+        <div class="col-lg-9 col-md-8 search px-0 py-1 py-md-0">
           <form class="form-inline h-100 formsearch" action="/action_page.php">
             <table class="table mb-0 h-100">
               <tbody>
@@ -491,26 +499,175 @@
         </div>
       </div>
     </div>
-    <div class="header-gallery container py-3">
-      <div class="row">
-        <div class="col-lg-3 col-md-0">
+  </header>
+  <div class="content">
+    <div class="container">
+      <div class="gallery container py-3">
+        <div class="row">
+          <div class="col-lg-3 col-md-0">
+          </div>
+          <div class="col-lg-9 col-md-12 px-0">
+            <div class=" bg-transparent">
+              <img src="/image/slide1.jpg" alt="" class="w-100">
+            </div>
+          </div>
         </div>
-        <div class="col-lg-9 col-md-12 px-0">
-          <div class=" bg-transparent">
-            <img src="/image/slide1.jpg" alt="" class="w-100">
+        <div class="row py-2">
+          <div class="col-md-6 hoverborder px-0">
+            <img src="image/1-1.webp" alt="" srcset="" class="w-100 ">
+          </div>
+          <div class="col-md-6 hoverborder px-0">
+            <img src="image/2.webp" alt="" srcset="" class="w-100">
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 hoverborder">
-          <img src="image/1-1.webp" alt="" srcset="" class="w-100 ">
+      <div class="row listproduct">
+        <div class="col-md-2 d-flex flex-column flex-md-row listproduct-title">
+          <div
+            class="d-flex flex-row flex-md-column title-vertical text-white justify-content-md-around justify-content-center">
+            <span>H</span>
+            <span>O</span>
+            <span>T</span>
+            <span class="title-color">D</span>
+            <span class="title-color">E</span>
+            <span class="title-color">A</span>
+            <span class="title-color">L</span>
+          </div>
+          <div
+            class="d-flex flex-row flex-md-column countdown text-white justify-content-around flex-grow-1 px-4 small">
+            <div class="d-flex justify-content-center flex-column ">
+              <span class="align-self-center">90</span>
+              <span class="align-self-center">Days</span>
+            </div>
+            <div class="d-flex justify-content-center flex-column ">
+              <span class="align-self-center">90</span>
+              <span class="align-self-center">Hrs</span>
+            </div>
+            <div class="d-flex justify-content-center flex-column ">
+              <span class="align-self-center">90</span>
+              <span class="align-self-center">Mins</span>
+            </div>
+            <div class="d-flex justify-content-center flex-column ">
+              <span class="align-self-center">90</span>
+              <span class="align-self-center">Secs</span>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 hoverborder">
-          <img src="image/2.webp" alt="" srcset="" class="w-100">
+        <div class="col-md-10 listproduct-content">
+          <div class="owl-carousel owl-theme owl-loaded listproduct-content-carousel">
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column ">
+                <img src="./image/product/1-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+              </div>
+            </div>
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column ">
+                <img src="./image/product/2-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+              </div>
+            </div>
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column product-wrapper">
+                <img src="./image/product/3-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+                <div class="product-action">
+                  <div class="product-action-style">
+                    <a class="action-plus" title="Quick View" data-toggle="modal" data-target="#exampleModal" href="#"
+                      data-abc="true">
+                      <i class="fa fa-plus"></i>
+                    </a>
+                    <a class="action-heart" title="Wishlist" href="#" data-abc="true">
+                      <i class="fa fa-heart"></i>
+                    </a>
+                    <a class="action-cart" title="Add To Cart" href="#" data-abc="true">
+                      <i class="fa fa-shopping-cart"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column ">
+                <img src="./image/product/4-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+              </div>
+            </div>
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column ">
+                <img src="./image/product/5-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+              </div>
+            </div>
+            <div class="owl-item w-100">
+              <div class="d-flex flex-column ">
+                <img src="./image/product/2-3-270x320.webp" alt="" srcset="" class="w-100">
+                <span class="bg-dark text-white w-100 px-2 py-1">Flat television</span>
+                <div class=" star mt-3 align-items-center text-warning">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+                <span class="text-danger font-weight-bold px-2">$100</span>
+              </div>
+            </div>
+          </div>
+          <div class="listproduct-content-button">
+            <div class="listproduct-content-button-prev"><i class="fas fa-chevron-left"></i></div>
+            <div class="listproduct-content-button-next"><i class="fas fa-chevron-right"></i></div>
+          </div>
+
         </div>
+
       </div>
     </div>
-  </header>
+  </div>
+
+
+
 
 
 </body>
