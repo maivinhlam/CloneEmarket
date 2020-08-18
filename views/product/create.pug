@@ -13,9 +13,9 @@ block content
         .form-group
           label(for='product_type') Product type
           select#product_type.form-control(name="product_type")
-            option Open this select menu
+            option(value="none") Open this select menu
             each p in product_type
-              option(value=p.type_id)= p.name        
+              option(value=p._id)= p.name        
         .form-group
           labe(for='name') Name
           input#name.form-control.mr-sm-2(type='text', placeholder='Name', aria-label='Name', name="name", 

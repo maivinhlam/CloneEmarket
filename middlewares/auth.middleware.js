@@ -1,26 +1,18 @@
-const db = require("../db");
+const User = require("../models/users.model");
 
-module.exports.requireAuth = (req, res, next) => {
+module.exports.requireAuth = async function (req, res, next) {
   if (!req.signedCookies.userId) {
     res.redirect("/auth/login");
     return;
   }
-  let sql = "SELECT * FROM users where user_id=?";
-  let userId = [req.signedCookies.userId];
-  let user;
-  db.query(sql, [userId], (err, result) => {
-    if (err) throw err;
 
-    user = result;
-    if (!user) {
-      res.redirect("/auth/login");
-      return;
-    }
+  const user = await User.find({ _id: req.signedCookies.userId }).exec();
+  if (!user) {
+    res.redirect("/auth/login");
+    return;
+  }
 
-    res.locals.user = user;
+  res.locals.user = user;
 
-    next();
-  });
-
-  // const user = db.get("users").find({ id: req.signedCookies.userId }).value();
+  next();
 };

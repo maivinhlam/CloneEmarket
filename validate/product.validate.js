@@ -1,4 +1,5 @@
-const db = require("../db");
+const ProductType = require("../models/ProductType.model");
+
 module.exports.postCreate = (req, res, next) => {
   var errors = [];
   if (!req.body.name) {
@@ -11,22 +12,20 @@ module.exports.postCreate = (req, res, next) => {
     errors.push("Price is required.");
   }
 
-  if (!req.body.product_type) {
+  if (req.body.product_type = "none") {
     errors.push("Product type is required.");
   }
-
+  
   if (errors.length) {
-    let sql = "select * from product_type";
-
-    db.query(sql, function (err, result) {
+    ProductType.find({}).exec((err, result) => {
       res.render("product/create", {
         errors: errors,
         values: req.body,
         product_type: result,
       });
-      return;
     });
+    
+    return;
   }
-  res.locals.success = true;
   next();
 };

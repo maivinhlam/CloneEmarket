@@ -1,26 +1,22 @@
-const db = require("../db");
 const shortid = require("shortid");
 const Product = require("../models/products.model");
+const ProductType = require("../models/ProductType.model");
 
-module.exports.index = (req, res) => {
-  Product.getProduct((err, data) => {
-    res.render("product/index", {
-      products: data,
-    });
+module.exports.index = async (req, res) => {
+  const products = await Product.find({});
+  res.render("product/index", {
+    products: products,
   });
 };
 
-module.exports.create = (req, res) => {
-  let sql = "select * from product_type";
-
-  db.query(sql, function (err, result) {
-    res.render("product/create", {
-      product_type: result,
-    });
+module.exports.create = async (req, res) => {
+  const productsType = await ProductType.find({});
+  res.render("product/create", {
+    product_type: productsType,
   });
 };
 
-module.exports.postCreate = (req, res) => {
+module.exports.postCreate = async (req, res) => {
   let id = shortid.generate();
   let typeId = req.body.product_type;
   let name = req.body.name;
@@ -28,8 +24,12 @@ module.exports.postCreate = (req, res) => {
   let price = req.body.price;
   let image = req.file.path.split("\\").slice(1).join("\\");
 
-  let product = new Product(id, typeId, name, description, price, image);
-  product.save();
-
+  await Product.create({
+    type_id: typeId,
+    name: name,
+    image: image,
+    description: description,
+    price: price,
+  });
   res.redirect("/products");
 };

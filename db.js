@@ -1,21 +1,10 @@
-// //implement DataBase LowDB
-// const low = require("lowdb");
-// const FileSync = require("lowdb/adapters/FileSync");
-// const adapter = new FileSync("db.json");
-// const db = low(adapter);
-// db.defaults({ users: [], sessions: [] }).write();
-
-var mysql = require("mysql");
-var db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "emarket",
+const mongoose = require("mongoose");
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
-
-db.connect(function (err) {
-  if (err) throw err;
-  console.log("MySQL Connected!");
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "MongoDB connection error:"));
+db.on("connected", function () {
+  console.log("Mongoose default connection open to " + process.env.MONGO_URL);
 });
-
-module.exports = db;

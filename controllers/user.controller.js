@@ -1,15 +1,12 @@
-var db = require("../db");
+
 const shortid = require("shortid");
 const Promise = require("promise");
 const User = require("../models/users.model");
 
-module.exports.index = (req, res) => {
-  User.getUser((err, data) => {
-    if (!err) {
-      res.render("users/index", {
-        users: data,
-      });
-    }
+module.exports.index = async (req, res) => {
+  const users = await User.find({});
+  res.render("users/index", {
+    users: users,
   });
 };
 

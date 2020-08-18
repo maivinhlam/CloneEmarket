@@ -1,13 +1,13 @@
 const mongoose = require("mongoose");
-let productTypeSchema = new mongoose.Schema({
+let cartSchema = new mongoose.Schema({
   _id: String,
   name: String,
 });
 
-const ProductType = mongoose.model(
+const Cart = mongoose.model(
   "ProductType",
   productTypeSchema,
   "product_type"
 );
 
-module.exports = ProductType;
+module.exports = Cart;
