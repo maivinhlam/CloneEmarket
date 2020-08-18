@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const cookieParser = require("cookie-parser");
 const userRoute = require("./routers/user.route");
 const authRoute = require("./routers/auth.route");
@@ -15,7 +16,7 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser("qawsedrftgyhujikolp"));
+app.use(cookieParser(process.env.SESSION_SECRET));
 app.use(sessionMiddleware);
 
 app.use(express.static("public"));
